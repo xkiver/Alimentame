@@ -4,11 +4,15 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -45,6 +49,8 @@ public class MainActivity extends AppCompatActivity implements
         ConnectionCallbacks, OnConnectionFailedListener, ResultCallback<Status> {
 
     protected static final String TAG = "MainActivity";
+    ListView listView;
+    DrawerLayout drawerLayout;
 
     //Proporciona el punto de entrada a los servicios de Google Play.
     protected GoogleApiClient mGoogleApiClient;
@@ -69,7 +75,8 @@ public class MainActivity extends AppCompatActivity implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        listView = (ListView) findViewById(R.id.list_view);
+        drawerLayout=(DrawerLayout) findViewById(R.id.drawer_layout);
         // Get the UI widgets.
         mAddGeofencesButton = (Button) findViewById(R.id.add_geofences_button);
         mRemoveGeofencesButton = (Button) findViewById(R.id.remove_geofences_button);
@@ -93,6 +100,12 @@ public class MainActivity extends AppCompatActivity implements
 
         // Kick off the request to build GoogleApiClient.
         buildGoogleApiClient();
+
+        String[] opciones = { "Opción 1", "Opción 2", "Opción 3", "Opción 4" };
+        listView.setAdapter(new ArrayAdapter(this,
+                android.R.layout.simple_list_item_1, android.R.id.text1,
+                opciones));
+
     }
 
 
