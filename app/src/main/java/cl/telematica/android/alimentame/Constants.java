@@ -48,12 +48,12 @@ public final class Constants {
      */
     public static final long GEOFENCE_EXPIRATION_IN_MILLISECONDS =
             GEOFENCE_EXPIRATION_IN_HOURS * 60 * 60 * 1000;
-    public static final float GEOFENCE_RADIUS_IN_METERS = 20;
+    public static final float GEOFENCE_RADIUS_IN_METERS = 40;
 
     public static final HashMap<String, LatLng> BAY_AREA_LANDMARKS = new HashMap<String, LatLng>();
     static {
         BAY_AREA_LANDMARKS.put("Esquina LabQui", new LatLng(-33.035341, -71.594965));
-        BAY_AREA_LANDMARKS.put("B-212", new LatLng(-33.035411, -71.595066));
+        BAY_AREA_LANDMARKS.put("B-212", new LatLng(-33.035532,-71.595490));
         BAY_AREA_LANDMARKS.put("Mi Casa", new LatLng(-33.049191, -71.400149));
     }
 }
