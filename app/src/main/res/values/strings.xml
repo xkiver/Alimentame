@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">Alimentame</string>
+    <!-- Buttons strings -->
+    <string name="add_geofences">Activar geofense</string>
+    <string name="remove_geofences">Desactivar geofence</string>
+
+    <string name="geofences_added">Geofence activado</string>
+    <string name="geofences_removed">Geofence desactivado</string>
+
+    <!-- Error strings -->
+    <string name="not_connected">GoogleApiClient no conectada. Intente nuevamente.</string>
+    <string name="geofence_not_available">Geofence no disponible</string>
+    <string name="geofence_too_many_geofences">Su app a registrado demasiados geofences</string>
+    <string name="geofence_too_many_pending_intents">
+        You have provided too many PendingIntents to the addGeofences() call
+    </string>
+    <string name="unknown_geofence_error">
+        Error desconocido: El servicio geofense no esta disponible
+    </string>
+    <string name="geofence_transition_invalid_type">
+        Geofence transition error: invalid transition type %1$d
+    </string>
+
+    <!-- Transition type strings -->
+    <string name="geofence_transition_entered">A ingresado a</string>
+    <string name="geofence_transition_exited">A salido de</string>
+    <string name="unknown_geofence_transition">Desconocida transcion</string>
+
+    <string name="geofence_transition_notification_text">Para retornar a la App haga click</string>
 </resources>
